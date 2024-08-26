@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="truechange.webreactplayer.WebReactPlayer" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Web React Player</name>
+    <description>React Media Player</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="url" type="attribute" required="true">
+                <caption>URL</caption>
+                <description>Video URL</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>              
+            <property key="playing" type="attribute" required="true">
+                <caption>Playing</caption>
+                <description>Toggle playing / paused</description>
+                <attributeTypes>
+                    <attributeType name="Boolean" />
+                </attributeTypes>
+            </property>
+            <property key="controls" type="attribute" required="true">
+                <caption>Controls</caption>
+                <description>Use embedded controls</description>
+                <attributeTypes>
+                    <attributeType name="Boolean" />
+                </attributeTypes>
+            </property>
+            <property key="pip" type="attribute" required="true">
+                <caption>Pip</caption>
+                <description>Toggle Pip mode</description>
+                <attributeTypes>
+                    <attributeType name="Boolean" />
+                </attributeTypes>
+            </property>                       
+        </propertyGroup>
+
+        <propertyGroup caption="State">            
+            <property key="elapsedSeconds" type="attribute" required="false">
+                <caption>Elapsed Seconds</caption>
+                <description>Seconds viewed of the video (played sec.)</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                </attributeTypes>
+            </property>
+            <property key="remainingSeconds" type="attribute" required="false">
+                <caption>Remaining Seconds</caption>
+                <description>Seconds remaining of the video</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                </attributeTypes>
+            </property>
+            <property key="duration" type="attribute" required="false">
+                <caption>Duration</caption>
+                <description>Seconds of duration of the video (video length)</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                </attributeTypes>
+            </property>
+            <property key="ended" type="attribute" required="false">
+                <caption>Ended</caption>
+                <description>Player reached the end of Video</description>
+                <attributeTypes>
+                    <attributeType name="Boolean" />
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
